@@ -1,0 +1,224 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+:root {
+  --yel: #ffc63f;
+  --bgc: #24a1f5;
+  
+}
+.App {
+  font-family: 'Bebas Neue', cursive;
+  
+}
+
+html {
+  background-color: var(--bgc);
+}
+
+.webhead {
+  font-size: 23vw;
+  color: #fff;
+  text-align: right;
+  background-color: var(--bgc);
+}
+
+.projectsbox, .aboutbox,
+.socialbox, .contactbox, .box{
+    background-color: var(--yel);
+    position: absolute;
+    text-decoration: none;
+    box-sizing: border-box;
+    height: auto;
+    width: auto;
+    transition: filter 300ms;
+}
+
+.projectsbox:hover, .aboutbox:hover,
+.socialbox:hover, .contactbox:hover, .box:hover {
+
+  filter: brightness(1.1);
+}
+
+.bprojectsbox, .baboutbox,
+.bsocialbox, .bcontactbox, .bbox {
+  background-color: #000;
+  position: absolute;
+  box-sizing: border-box;
+  width: 75%;
+  height: 15%;
+  z-index: -1;
+}
+
+.projectsbox {
+  
+  top: 43%;
+  font-size: 5vw;
+  padding: 5% 2% 0% 15%;
+  text-decoration: none;
+
+}
+
+.bprojectsbox {
+  
+  left: 0%;  
+}
+
+.aboutbox {
+   top: 69%;
+   font-size: 4vw;
+   padding: 4% 2% 0% 10%;
+   text-decoration-color: #000;
+}
+
+.baboutbox {
+  
+  top: 100%;
+  left: 0%;
+  
+}
+
+.contactbox {
+  top: 70%;
+  font-size: 5vw;
+  padding: 5% 15% 0% 2%;
+  text-decoration: none;
+  right: 0%;
+  
+}
+
+.bcontactbox{
+  top: 100%;
+  right: 0%;
+}
+
+.box {
+  top: 46%;
+  background-color: var(--yel);
+  position: absolute;
+  text-decoration: none;
+  box-sizing: border-box;
+  right: 0%;
+  padding: 5% 15% 0% 2%;
+  font-size: 4vw;
+  
+}
+
+.bbox{
+  right: 0%;
+}
+
+
+
+/* <===TRANSITIONS===>*/
+
+.projectsbox, .bprojectbox{
+  animation: 1000ms, ease-in;
+  animation-name: projectsbox;
+}
+
+@keyframes projectsbox {
+  from {
+      left: -100%;
+      }
+      to{
+      left: 0%;
+    }
+}
+
+.aboutbox, .baboutbox{
+    animation: 1000ms, ease-in;
+    animation-name: about;
+    animation-timing-function: linear;
+}
+@keyframes about {
+    from{
+        left: -100%;
+    } to {
+        left: 0%;
+    }
+}
+ .contactbox, .bcontactbox{
+     animation: 1000ms, ease-in;
+     animation-name: contactbox;
+ }
+ @keyframes contactbox{
+     from{
+         right: -1000px;
+     } to {
+         right: 0px;
+     }
+ }
+
+ .box, .bbox{
+     animation: 1500ms, ease-in;
+     animation-name: socialbox;
+ }
+ @keyframes socialbox{
+  from{
+      right: -1000px;
+  } to {
+      right: 0px;
+  }
+ }
+
+
+ @media screen and (max-width: 450px){
+
+
+.projectsbox, .aboutbox,
+.socialbox, .contactbox, .box{
+    background-color: var(--yel);
+    position: absolute;
+    text-decoration: none;
+    box-sizing: border-box;
+    height: auto;
+    width: auto;
+    transition: filter 300ms;
+}
+
+  .projectsbox{
+      bottom: 60%;
+      padding: 5% 2% 0% 15%;
+    
+  }
+ 
+
+  .contactbox{
+   right: 0;
+   bottom: 40%;
+   padding: 5% 15% 0% 2%;
+   
+  }
+  
+
+  .aboutbox{
+   
+   float: left;
+   padding: 4% 2% 0% 10%;
+   
+  }
+ 
+
+  .box{
+  
+   right: 0%;
+   padding: 5% 15% 0% 2%;
+  }
+  
+
+  .tprojects{
+      font-size: 10vw;
+  }
+  .tcontact{
+      font-size: 8vw;
+  }
+  .tabout{
+      font-size: 8vw;
+  }
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
